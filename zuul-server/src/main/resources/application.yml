@@ -1,0 +1,15 @@
+server:
+  port: 8500
+spring:
+  application:
+    name: zuul-server
+# 不配置下面的话，代理访问会以service-id来访问，例如：http://localhost:8500/producer-server/get
+#zuul:
+#  routes:
+#    producer:
+#      path: /producer/**
+#      serviceId: producer-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
